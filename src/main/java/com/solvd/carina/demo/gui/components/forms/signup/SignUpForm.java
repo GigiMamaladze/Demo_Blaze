@@ -1,12 +1,10 @@
-package com.solvd.carina.demo.gui.components.forms;
+package com.solvd.carina.demo.gui.components.forms.signup;
 
-import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-@DeviceType(pageType = DeviceType.Type.DESKTOP, parentClass = SignUpFormBase.class)
-public class SignUpForm extends SignUpFormBase{
+public class SignUpForm extends SignUpFormBase {
 
     @FindBy(xpath = "//*[@class = 'modal-header']/h5[contains(text(), 'Sign up')]")
     public ExtendedWebElement formTitle;
@@ -16,6 +14,9 @@ public class SignUpForm extends SignUpFormBase{
 
     @FindBy(xpath = "//*[@id = 'sign-password']")
     public ExtendedWebElement passwordTextField;
+
+    @FindBy(xpath = "//*[@onclick='register()']")
+    public ExtendedWebElement signUpButton;
 
     public SignUpForm(WebDriver driver) {
         super(driver);
@@ -34,5 +35,10 @@ public class SignUpForm extends SignUpFormBase{
     @Override
     public boolean isSignUpFormPoppedUp() {
         return formTitle.isElementPresent();
+    }
+
+    @Override
+    public void clickSignUpBtn() {
+        signUpButton.click();
     }
 }
