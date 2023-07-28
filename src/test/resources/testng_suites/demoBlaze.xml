@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Dome Blaze - Web application Test" parallel="methods">
+
+    <test name="Demo blaze web tests">
+        <classes>
+            <class name="com.solvd.carina.demo.DemoBlazeTest" />
+        </classes>
+    </test>
+
+</suite>
