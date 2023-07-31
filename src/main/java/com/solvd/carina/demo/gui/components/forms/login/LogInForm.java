@@ -7,16 +7,16 @@ import org.openqa.selenium.support.FindBy;
 public class LogInForm extends LogInFormBase {
 
     @FindBy(css = "#logInModalLabel")
-    public ExtendedWebElement formTitle;
+    private ExtendedWebElement formTitle;
 
     @FindBy(css = "#loginusername")
-    public ExtendedWebElement userNameTextField;
+    private ExtendedWebElement userNameTextField;
 
     @FindBy(css = "#loginpassword")
-    public ExtendedWebElement passwordTextField;
+    private ExtendedWebElement passwordTextField;
 
     @FindBy(xpath = "//*[@onclick='logIn()']")
-    public ExtendedWebElement logInButton;
+    private ExtendedWebElement logInButton;
 
     public LogInForm(WebDriver driver) {
         super(driver);

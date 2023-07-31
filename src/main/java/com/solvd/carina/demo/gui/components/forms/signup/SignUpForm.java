@@ -7,16 +7,16 @@ import org.openqa.selenium.support.FindBy;
 public class SignUpForm extends SignUpFormBase {
 
     @FindBy(xpath = "//*[@class = 'modal-header']/h5[contains(text(), 'Sign up')]")
-    public ExtendedWebElement formTitle;
+    private ExtendedWebElement formTitle;
 
     @FindBy(xpath = "//*[@id = 'sign-username']")
-    public ExtendedWebElement usernameTextField;
+    private ExtendedWebElement usernameTextField;
 
     @FindBy(xpath = "//*[@id = 'sign-password']")
-    public ExtendedWebElement passwordTextField;
+    private ExtendedWebElement passwordTextField;
 
     @FindBy(xpath = "//*[@onclick='register()']")
-    public ExtendedWebElement signUpButton;
+    private ExtendedWebElement signUpButton;
 
     public SignUpForm(WebDriver driver) {
         super(driver);
